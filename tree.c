@@ -42,7 +42,8 @@ node* newNode(){
         return NULL;
     nd->letter='\0';
     nd->count=0;
-    for (int i = 0; i < NUM_LETTERS; ++i) {
+    int i;
+    for (i = 0; i < NUM_LETTERS; ++i) {
         nd->children[i]=NULL;
     }
     return nd;
@@ -93,6 +94,7 @@ int main(int argc, char *argv[]) {
         t=1;
    char *word=(char*)malloc(max* sizeof(char)+1);
    if(!word){
+       destRootRec(root);
        exit(0);
    }
    printFreq(root,t,word,1);
