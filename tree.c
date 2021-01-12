@@ -89,6 +89,7 @@ int main(int argc, char *argv[]) {
             i++;
         }
     }
+    max=max<i?i:max;
     int t=0;
     if(argc==2&&argv[1][0]=='r')
         t=1;
